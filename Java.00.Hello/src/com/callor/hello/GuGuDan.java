@@ -14,6 +14,8 @@ public class GuGuDan {
 		System.out.println("3 x 8 = "+ 3*8);
 		System.out.println("3 x 9 = "+ 3*9);
 		System.out.println("================");
+		
+		//
 	}
 
 }
