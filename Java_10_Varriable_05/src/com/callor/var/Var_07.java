@@ -18,5 +18,7 @@ public class Var_07 {
 		
 		System.out.println(intNum % 2 == 0);
 		
+		// == 는 비교연산자. 변수에 담겨있는 값이 다른변의 것과 값이 같냐라고 물어보는것.
+		//같다면 연산은 true 거짓이면 false.
 	}
 }
