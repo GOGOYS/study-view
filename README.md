@@ -1,6 +1,16 @@
 # 자바 프로젝트
 ## 2022-03-18 프로젝트 시작
 
+### :pig:[변수 선언하기](https://github.com/GOGOYS/study-view/tree/master/Java_10_Varriable_02)
+* 2022-03-24
+* 변수 선언하기
+* 변수의 선언방법
+
+### :tiger:[변수 사용하기](https://github.com/GOGOYS/study-view/tree/master/Java_10_Varriable_03)
+* 2022-03-25
+* 변수 사용하기
+* 변수의 사용방법
+
 ### :frog:[정수형 실수형 변수](https://github.com/GOGOYS/study-view/tree/master/Java_10_Varriable_04)
 * 2022-03-28
 * 정수형 변수, 실수형 변수 선언하기
