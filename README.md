@@ -1,5 +1,10 @@
 # 자바 프로젝트
 ## 2022-03-18 프로젝트 시작
+
+### :frog:[정수형 실수형 변수](https://github.com/GOGOYS/study-view/tree/master/Java_10_Varriable_04)
+* 2022-03-28
+* 정수형 변수, 실수형 변수 선언하기
+* 정수형, 실수형 변수 연산하기
  
 ### :hamster:[문자열형 변수](https://github.com/GOGOYS/study-view/tree/master/Java_10_Varriable_05)
 * 2022-03-29
