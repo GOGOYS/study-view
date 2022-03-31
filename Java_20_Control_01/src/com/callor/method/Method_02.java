@@ -29,7 +29,7 @@ public class Method_02 {
 		return 444444444;
 	}
 	public static float fNum() {
-		return 12345678;
+		return 12345678f;
 	}
 	public static boolean bYes() {
 		return true;
