@@ -27,3 +27,8 @@
 * boolean 연산하기 => 비교연산  
 * if()문 기본사용법  
 
+###  :dog:[boolean과 if() 명령문](https://github.com/GOGOYS/study-view/tree/master/Java_20_Control_01)
+* 2022-03-31
+* boolean type 변수 비교하기    
+* if()문으로 boolean 비교하기
+* method 사용하기
