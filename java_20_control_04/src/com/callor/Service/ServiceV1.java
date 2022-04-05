@@ -6,28 +6,20 @@ public class ServiceV1 {
 	public void guguDan() {
 		
 		 int intNum1 =3;
-		 
+
 		 int intNum2 =1;
-		 
-		 int intNum3 = intNum1 * intNum2;
-		 
-		 System.out.printf("%d * %d = %d\n", intNum1,intNum2++,intNum3);
-		 intNum3 = intNum1 * intNum2;
-		 System.out.printf("%d * %d = %d\n", intNum1,intNum2++,intNum3);
-		 intNum3 = intNum1 * intNum2;
-		 System.out.printf("%d * %d = %d\n", intNum1,intNum2++,intNum3);
-		 intNum3 = intNum1 * intNum2;
-		 System.out.printf("%d * %d = %d\n", intNum1,intNum2++,intNum3);
-		 intNum3 = intNum1 * intNum2;
-		 System.out.printf("%d * %d = %d\n", intNum1,intNum2++,intNum3);
-		 intNum3 = intNum1 * intNum2;
-		 System.out.printf("%d * %d = %d\n", intNum1,intNum2++,intNum3);
-		 intNum3 = intNum1 * intNum2;
-		 System.out.printf("%d * %d = %d\n", intNum1,intNum2++,intNum3);
-		 intNum3 = intNum1 * intNum2;
-		 System.out.printf("%d * %d = %d\n", intNum1,intNum2++,intNum3);
-		 intNum3 = intNum1 * intNum2;
-		 System.out.printf("%d * %d = %d\n", intNum1,intNum2++,intNum3);
+		 		 
+		 System.out.printf("%d * %d = %d\n", intNum1,intNum2,intNum1 * intNum2);
+		 System.out.printf("%d * %d = %d\n", intNum1,++intNum2,intNum1 * intNum2);
+		 System.out.printf("%d * %d = %d\n", intNum1,++intNum2,intNum1 * intNum2);
+		 System.out.printf("%d * %d = %d\n", intNum1,++intNum2,intNum1 * intNum2);
+		 System.out.printf("%d * %d = %d\n", intNum1,++intNum2,intNum1 * intNum2);
+		 System.out.printf("%d * %d = %d\n", intNum1,++intNum2,intNum1 * intNum2);
+		 System.out.printf("%d * %d = %d\n", intNum1,++intNum2,intNum1 * intNum2);
+		 System.out.printf("%d * %d = %d\n", intNum1,++intNum2,intNum1 * intNum2);
+		 System.out.printf("%d * %d = %d\n", intNum1,++intNum2,intNum1 * intNum2);
+	
+	
 		 
 		 
 		 
