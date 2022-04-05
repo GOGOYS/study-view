@@ -32,3 +32,8 @@
 * boolean type 변수 비교하기    
 * if()문으로 boolean 비교하기
 * method 사용하기
+
+###  :fox:[class 연결과 for() 명령문](https://github.com/GOGOYS/study-view/tree/master/Java_20_Control_04)
+* 2022-04-05
+* class를 따로 선언해서 연결하기
+* for문 기본 사용법

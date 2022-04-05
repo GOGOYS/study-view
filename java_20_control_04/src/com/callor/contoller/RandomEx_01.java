@@ -1,4 +1,4 @@
-package com.callor.contoler;
+package com.callor.contoller;
 
 import java.util.Random;
 

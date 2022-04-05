@@ -1,4 +1,4 @@
-package com.callor.contoler;
+package com.callor.contoller;
 
 import java.util.Scanner;
 // 컨트롤 쉬프트 o는 임포트
