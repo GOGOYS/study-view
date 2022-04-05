@@ -1,4 +1,4 @@
-package dom.callor.contoler;
+package com.callor.contoler;
 
 //지금부터 java.util package에 담긴 Scanner라는 클래스를 사용 하겠다.
 import java.util.Scanner;
