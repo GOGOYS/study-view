@@ -1,6 +1,6 @@
 package col.callor.controller.op;
 
-public class CaseCading_01 {
+public class Casting_01 {
 	public static void main(String[] args) {
 		
 		//java에서 취급하는 정수
