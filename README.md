@@ -37,3 +37,8 @@
 * 2022-04-05
 * class를 따로 선언해서 연결하기
 * for문 기본 사용법
+
+### :horse:[MVC패턴](https://github.com/GOGOYS/study-view/tree/master/Java_20_Control_05)
+* 2022-04-06
+* Model View Controller 패턴 사용
+* for문을 이용한 구구단 반복 출력
