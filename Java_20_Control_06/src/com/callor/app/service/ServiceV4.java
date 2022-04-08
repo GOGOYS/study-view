@@ -23,9 +23,9 @@ public class ServiceV4 {
 		 * 여기에서 저장된 변수 값은 scorePrint에서 읽어서 출력하면 같은 값이 출력된다.
 		 */
 		
-		intKor = (int)(Math.random() * 100)+1;
-		intEng = (int)(Math.random() * 100)+1;
-		intMath = (int)(Math.random() * 100)+1;
+		intKor = (int)(Math.random() * 100) + 1;
+		intEng = (int)(Math.random() * 100) + 1;
+		intMath = (int)(Math.random() * 100) + 1;
 		
 		int intSum = intKor + intEng + intMath;
 		return  intSum;

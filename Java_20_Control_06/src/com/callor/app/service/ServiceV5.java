@@ -16,7 +16,7 @@ public class ServiceV5 {
 		System.out.println (LinePrint.dLine );
 		System.out.println("나라 고교 성적처리 V1");
 		System.out.println( LinePrint.sLine);
-		System.out.println("다음 성적을 50  ~ 100점 범위에서 입력하세요");
+		System.out.println("다음 성적을 50 ~ 100점 범위에서 입력하세요");
 		
 		System.out.println("국어 > ");
 		intKor = scanner.nextInt();
