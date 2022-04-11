@@ -69,13 +69,15 @@ public class Var_01 {
 		 *  => 헝가리언 표기법
 		 */
 		
+		
 		int intNum1 = 0;
 		// 보통 정수형 변수는 변수 이름 앞에 int를 붙여 정수형이라는걸 알려준다.
 		
 		int intStNum = 16000263;
 		int intStAge = 26;
 		int intTelNum = 1039526770;
-		 System.out.println(intStNum + intTelNum + intStAge);
+		System.out.println(intStNum + intTelNum + intStAge);
+		 
 		
 		
 		//erp: enterprise resource plane

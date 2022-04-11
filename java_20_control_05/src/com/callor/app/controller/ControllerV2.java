@@ -11,9 +11,8 @@ public class ControllerV2 {
 		
 		System.out.println("================================");
 		
-		serviceV2.guguDan(8);
+		serviceV2.guguDan(7);
 		
-		serviceV2.gugugu();
 		
 	}
 	
