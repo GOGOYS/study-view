@@ -40,7 +40,7 @@ public class ScoreServiceV5 {
 			System.out.printf("%d : %d\t\t",(i+1),intKorea[i]);
 			intSum += intKorea[i];
 			
-			if(i % 5 ==0) {
+			if((i+1) % 5 ==0) {
 				System.out.println();
 			}
 		}
