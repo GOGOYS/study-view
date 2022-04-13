@@ -13,16 +13,16 @@ public class ExecV6 {
 			
 		}
 		
-		for(int i =0; i < intNum.length; i ++) {
+		for(int i =0; i < intNum.length; i++) {
 			
 			
-			if(intNum[i] % 2 ==0) {
+			if(intNum[i] % 2 == 0) {
 				
 				System.out.print(intNum[i]+ ", \t");
 				
 				intEvenCount ++;
 				
-				if(intEvenCount % 5==0) {
+				if(intEvenCount % 5 == 0) {
 					
 					System.out.println("");
 				}
