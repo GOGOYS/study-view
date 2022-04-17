@@ -8,7 +8,7 @@ public class ArraysV3 {
 		int index = 0;
 		
 		// index 변수의 값이 0 이므로 intNums[0]와 같은 코드가 된다.
-		//index라는 변수를 사용하여 첨저를 지정함으로써 반복되는 코드가 만들어지고
+		//index라는 변수를 사용하여 첨자를 지정함으로써 반복되는 코드가 만들어지고
 		//단순한 코드가 생성되었다.
 		intNums[index ++] = (int)(Math.random() *100) +1;
 		intNums[index ++] = (int)(Math.random() *100) +1;
@@ -55,7 +55,7 @@ public class ArraysV3 {
 		
 		intSum =0;
 		
-		//intScore배열의 0번부터 intScore.length -1 번까지의 변수를 모두 합산하여 inSum에 담고, 콘솔에 출력
+		//intScore배열의 0번부터 intScore.length -1 번까지의 변수를 모두 합산하여 intSum에 담고, 콘솔에 출력
 		
 		for(index =0; index < intScore.length; index++) {
 			intSum += intScore[index];
