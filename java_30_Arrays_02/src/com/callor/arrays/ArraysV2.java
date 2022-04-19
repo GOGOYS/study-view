@@ -8,7 +8,7 @@ public class ArraysV2 {
 		//다음과 같은 식이 성립한다.
 		// index <length : index와 length는 항상 0보다 큰 정수이다.
 		
-		int[] intNums = new int[3];
+		int[] intNums = new int[1];
 		
 		intNums[0] = 10;
 		intNums[1] = 20;

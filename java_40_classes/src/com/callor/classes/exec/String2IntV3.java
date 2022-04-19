@@ -7,7 +7,7 @@ public class String2IntV3 {
 		 * NumberFormatException이 발생하는 상황들
 		 */
 		// -숫자와 함께 숫자가 아닌 문자열(space)가 포함된 경우
-		String strNum = "33";
+		String strNum = " 33";
 		int intNum = Integer.valueOf(strNum);
 
 		// - ""(없는 문자열)

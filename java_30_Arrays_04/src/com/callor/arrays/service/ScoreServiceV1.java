@@ -51,7 +51,7 @@ public class ScoreServiceV1 {
 		 
 		/*
 		 * dLine속성(변수)는 static으로 선언되어 있기 때문에
-		 * Line 클래스를 인스턴스로 생성하지 않고도 전급할 필요가 없다.
+		 * Line 클래스를 인스턴스로 생성하지 않고 접근할 수 있다.
 		 * Line line = new Line();을 생략하고 바로 사용할 수 있다.
 		 */
 		System.out.println( Line.dLine);

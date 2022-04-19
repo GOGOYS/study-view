@@ -10,7 +10,7 @@ public class Line {
 		 * final 키워드 : 변수에 final 키워드가 부착되면, 한번 저장된 값을 
 		 * 				  절대 변경 할 수 없다 (can not assign)
 		 * 
-		 * 프로젝트에서 공통으로 공유하여 사용ㅎ라 변수는
+		 * 프로젝트에서 공통으로 공유하여 사용하는 변수는
 		 *  public static final 키워드를 함께 사용한다.
 		 */
 		public static final String dLine = "=".repeat(100);
