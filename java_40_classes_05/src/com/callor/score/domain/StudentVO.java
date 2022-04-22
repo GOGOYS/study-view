@@ -16,6 +16,12 @@ public class StudentVO {
 		return "StudentVO [stNum=" + stNum + ", stName=" + stName + ", stGrade=" + stGrade + ", stDept=" + stDept
 				+ ", stAddr=" + stAddr + "]";
 	}
+	
+	
+	/*
+	 * set은 변수를 가져와서 담아라
+	 * get은 변수를 읽어와라
+	 */
 	public String getStNum() {
 		return stNum;
 	}

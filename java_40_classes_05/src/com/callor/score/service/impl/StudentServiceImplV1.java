@@ -10,7 +10,7 @@ import com.callor.score.service.StudentService;
 
 public class StudentServiceImplV1 implements StudentService {
 	
-	private StudentVO[] stVO;
+	private StudentVO[] stList;
 	private String stFile;
 	
 	
@@ -20,9 +20,9 @@ public class StudentServiceImplV1 implements StudentService {
 	 */
 	public StudentServiceImplV1(String stFile, int length) {
 		this.stFile = stFile;
-		this.stVO = new StudentVO[length];
-		for(int i =0; i < this.stVO.length; i++) {
-			this.stVO[i] = new StudentVO();
+		this.stList = new StudentVO[length];
+		for(int i =0; i < this.stList.length; i++) {
+			this.stList[i] = new StudentVO();
 		}
 	}
 	
@@ -43,7 +43,7 @@ public class StudentServiceImplV1 implements StudentService {
 		Scanner scan = new Scanner(is);
 		/*
 		while(true) {
-			boolean bYes = scan.hasNext(); // hasNext() 연결된 값이 있냐고 물어보는것
+			boolean bYes = scan.hasNext(); // hasNext() 입력된 값이 있냐고 물어보는것
 			if(bYes == false) {
 				break;
 			}
@@ -52,7 +52,14 @@ public class StudentServiceImplV1 implements StudentService {
 		}
 		*/
 		
+		
+		/*
+		 * 읽을 값이 있냐고 물어보는 것
+		 * 조건문 안에 코드를 넣어서 읽을게 없으면 while문이 종료되게 한다.
+		 * 
+		 */
 		//hasNext()가 참일때만 실행되게끔
+		int index = 0; // stList의 요소를 가리키는 것
 		while(scan.hasNext()) {
 			String stLine = scan.nextLine();
 			System.out.println(stLine);
@@ -70,6 +77,25 @@ public class StudentServiceImplV1 implements StudentService {
 			stVO.setStGrade(stInfos[2]);
 			stVO.setStDept(stInfos[4]);
 			stVO.setStAddr(stInfos[5]);
+			
+			stList[index++] = stVO;
+			
+		}//end while // 여기를 지나면 stList에 모든 데이터가 담겨있을것
+		this.printStudents();
+		
+	}// end loadStudent
+	
+	//V1 클래스에서 학생 stList에 담긴 데이터를 확인하기위해 내부용으로 만든 메서드
+	private void printStudents() {
+		
+		
+		for(int i=0; i< stList.length; i++) {
+			System.out.println(stList[i].toString());
+		}
+		//두 for()문의 결과는 같음.
+		for(StudentVO vo : stList) {
+			System.out.println(vo.toString());
+			
 		}
 		
 	}
