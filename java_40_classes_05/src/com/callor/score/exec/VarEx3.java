@@ -17,6 +17,8 @@ public class VarEx3 {
 		char char1;
 		
 		
+		
+		
 		//class type 변수 선언문
 		//기본형 변수들을 감싸고 있는 클래스
 		//wrapper 클래스
@@ -27,6 +29,9 @@ public class VarEx3 {
 		
 		Boolean bYes1;
 		Character char11;
+		
+		
+		
 		
 		/*
 		 * <> : Generic(제네릭)
