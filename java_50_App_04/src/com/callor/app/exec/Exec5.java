@@ -1,13 +1,12 @@
 package com.callor.app.exec;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.callor.app.GetValue;
 
 public class Exec5{
 	public static void main(String[] args) {
-			List<Integer> nums = GetValue.gerList(100);
+			List<Integer> nums = GetValue.getList(100);
 		
 		int size = nums.size();
 		

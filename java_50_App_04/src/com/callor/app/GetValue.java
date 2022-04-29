@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GetValue {
-	 public  static List<Integer> gerList(int length){
+	 public  static List<Integer> getList(int length){
 		 
 		 List<Integer> list = new ArrayList<>();
 		 for(int i =0; i < length; i++) {
