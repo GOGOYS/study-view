@@ -7,8 +7,8 @@ import com.callor.app.model.ScoreVO;
 
 public class ScoreService{
 	
-	public static List<ScoreVO> sVO;
-	
+	public static List<ScoreVO> sVO
+
 	public ScoreService() {
 		sVO = new ArrayList<ScoreVO>();
 	}
@@ -18,7 +18,7 @@ public class ScoreService{
 		for(int i =0; i <20; i++) {
 			
 			int num = (int)(Math.random()* 100)+1;
-			sVO.getKor();
+			sVO.setIntNum(num);
 		}
 		
 		return 0; 
