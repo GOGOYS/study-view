@@ -1,60 +1,68 @@
 package com.callor.app.model;
 
-import java.util.List;
-
 public class ScoreVO {
-	 private List<Integer> intNum;
-	 private List<Integer> intKor;
-	 private List<Integer> intEng;
-	 private List<Integer> intMath;
-	 private List<Integer> intSum;
-	 private List<Integer> intAgr;
-	 
-	 
-	 
-	 
-	public List<Integer> getIntNum() {
+	private int intNum;
+	private int intKor;
+	private int intEng;
+	private int intMath;
+	private int intSum;
+	private float fAgr;
+
+	public ScoreVO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getIntNum() {
 		return intNum;
 	}
-	public void setIntNum(List<Integer> intNum) {
+
+	public void setIntNum(int intNum) {
 		this.intNum = intNum;
 	}
-	public List<Integer> getIntKor() {
+
+	public int getIntKor() {
 		return intKor;
 	}
-	public void setIntKor(List<Integer> intKor) {
+
+	public void setIntKor(int intKor) {
 		this.intKor = intKor;
 	}
-	public List<Integer> getIntEng() {
+
+	public int getIntEng() {
 		return intEng;
 	}
-	public void setIntEng(List<Integer> intEng) {
+
+	public void setIntEng(int intEng) {
 		this.intEng = intEng;
 	}
-	public List<Integer> getIntMath() {
+
+	public int getIntMath() {
 		return intMath;
 	}
-	public void setIntMath(List<Integer> intMath) {
+
+	public void setIntMath(int intMath) {
 		this.intMath = intMath;
 	}
-	public List<Integer> getIntSum() {
+
+	public int getIntSum() {
 		return intSum;
 	}
-	public void setIntSum(List<Integer> intSum) {
+
+	public void setIntSum(int intSum) {
 		this.intSum = intSum;
 	}
-	public List<Integer> getIntAgr() {
-		return intAgr;
-	}
-	public void setIntAgr(List<Integer> intAgr) {
-		this.intAgr = intAgr;
-	}
-	
-	@Override
-	public String toString() {
-		return "ScoreVO [intNum=" + intNum + ", intKor=" + intKor + ", intEng=" + intEng + ", intMath=" + intMath
-				+ ", intSum=" + intSum + ", intAgr=" + intAgr + "]";
+
+	public float getfAgr() {
+		return fAgr;
 	}
 
+	public void setfAgr(float fAgr) {
+		this.fAgr = fAgr;
+	}
+
+	@Override
+	public String toString() {
+		return intNum + "\t" + intKor + "\t" + intEng + "\t" + intMath + "\t" + intSum + "\t" + fAgr;
+	}
 
 }
