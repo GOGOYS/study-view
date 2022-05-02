@@ -45,6 +45,9 @@ public class ScoreVO {
 	}
 
 	public int getIntSum() {
+		//VO 클래스에서 연산식을 수행하는게 더 좋다.
+		//코드를 수정하거나 추가할때 VO를 사용하는게 더 용이하다.
+		intSum = intKor + intEng + intMath;
 		return intSum;
 	}
 
@@ -53,6 +56,9 @@ public class ScoreVO {
 	}
 
 	public float getfAgr() {
+		//VO 클래스에서 연산식을 수행하는게 더 좋다.
+		//코드를 수정하거나 추가할때 VO를 사용하는게 더 용이하다.
+		fAgr = (float)intSum / 3; 
 		return fAgr;
 	}
 
