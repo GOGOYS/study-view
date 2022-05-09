@@ -33,7 +33,7 @@ public class StudentDao {
 			StudentVO stVO = new StudentVO(
 				rSet.getString("st_num"),
 				rSet.getString("st_name"),
-				rSet.getString("st_tel"),s
+				rSet.getString("st_tel"),
 				rSet.getString("st_addr"),
 				rSet.getString("st_dept"),
 				rSet.getInt("st_grade")
