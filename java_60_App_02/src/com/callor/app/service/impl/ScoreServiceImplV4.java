@@ -17,6 +17,10 @@ public class ScoreServiceImplV4 extends ScoreServiceImplV3{
 		
 		FileWriter fileWriter = null;
 		PrintWriter print = null;
+		/*
+		 * 파일 데이터에 저장
+		 * V3와 다른 방법임
+		 */
 		
 		try {
 			fileWriter = new FileWriter(saveFileName);
