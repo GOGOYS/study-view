@@ -48,7 +48,8 @@ public class TodoControllerV12 {
  						continue;
  					}
  					if(num == -1) return;
- 					toService.compTodo(num);
+ 					toService.compTodo(num-1, todoList);
+ 					printTodo(todoList);
  				}
  			}
 		} // end while

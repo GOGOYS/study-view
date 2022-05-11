@@ -19,7 +19,7 @@ public interface TodoService {
 	public void update(TodoVO tVO);
 	
 	//할일을 완료했을때 사용할 method
-	public void compTodo(Integer num);
+	public void compTodo(Integer num, List<TodoVO> toVO);
 	
 	//TODOList내용을 파일에 저장하기
 	public void saveTodo(String fileName);
