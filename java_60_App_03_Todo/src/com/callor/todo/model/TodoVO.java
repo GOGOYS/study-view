@@ -38,8 +38,10 @@ public class TodoVO {
 		//아래의 if() 명령문을 간소화한 명령문
 		if(eDate == null || eDate.isEmpty()) {
 			compStr = "진행중";
+	
 		}else {
 			compStr = "완료됨";
+			
 		}
 		
 		result += String.format("%s\t", tContent);

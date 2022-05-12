@@ -1,6 +1,13 @@
 package com.callor.todo.service.impl;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -10,11 +17,18 @@ import com.callor.todo.model.TodoVO;
 import com.callor.todo.service.TodoService;
 
 public class TodoServiceImplV1 implements TodoService {
-
-	private final List<TodoVO> todoList;
+	
+	protected final String saveFileName;
+	protected final List<TodoVO> todoList;
 
 	public TodoServiceImplV1() {
+		
+		this("src/com/callor/todo/model/todolist.txt");
+	}
+	public TodoServiceImplV1(String saveFileName) {
+		
 		todoList = new ArrayList<>();
+		this.saveFileName = saveFileName;
 	}
 
 	/*
@@ -74,11 +88,32 @@ public class TodoServiceImplV1 implements TodoService {
 	}
 
 	@Override
-	public void saveTodo(String fileName) {
-		// TODO Auto-generated method stub
+	public void saveTodo(String fileName) throws IOException {
 
+		FileWriter writer = null;
+		PrintWriter out = null;
+		
+		writer = new FileWriter(saveFileName);
+		out = new PrintWriter(writer);
+		
+		for(TodoVO vo : todoList) {
+			out.printf("%s:", vo.getTKey());
+			out.printf("%s:", vo.getSDate());
+			out.printf("%s:",vo.getSTime());
+			out.printf("%s:",vo.getEDate());
+			out.printf("%s:",vo.getETime());
+			out.printf("%s\n",vo.getTContent());
+		}
+		// buffer 에 남아있는 데이터를 강제로 파일에 기록
+		out.flush();
+		
+		// 열려있는 파일 resource 를 닫기
+		// 파일에 저장하는 코드에서는 
+		// 반드시 마지막에 close를 해야 한다
+		out.close();
+		writer.close();
+		
 	}
-
 	/*
 	 * TODO 완료하기 매개변수로 전달받은 num 값은 List 요소의 실제 값보다 1만큼 크다 num 값이 4라면 실제로를 3번 요소를 선택한
 	 * 것이다.
@@ -88,19 +123,55 @@ public class TodoServiceImplV1 implements TodoService {
 	 * 완료한 날짜와 시간을 지정하기 숙제
 	 */
 	@Override
-	public void compTodo(Integer num, List<TodoVO> toVO) {
+	public void compTodo(Integer num) {
+		int index = num - 1;
+		// java 1.8부터 사용하는 새로운 날짜 시간 관련 클래스
+		// Date, Calender 클래스의 날짜와 관련된 많은 이슈때문에 새롭게 디자인되고 만들어진 클래스이다.
+		// 객체를 새로 생성하는 것이 아니고 now()라는 static 메서드를 호출하여 가져다 쓰는구조이다.
+		LocalDateTime local = LocalDateTime.now();
+		LocalDate localdate = LocalDate.now();
+		LocalTime localtime = LocalTime.now();
 
-		Date curDate = new Date(System.currentTimeMillis());
+		// 날짜형의 문자열로 변환하기
+		DateTimeFormatter toDateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		DateTimeFormatter toTimeFormat = DateTimeFormatter.ofPattern("hh::mm:ss");
 
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss");
-		String today = dateFormat.format(curDate);
-		String time = timeFormat.format(curDate);
+		String eDate = local.format(toTimeFormat);
+		String eTime = local.format(toTimeFormat);
+		try {
+			
+			//todo의 eDate값이 null 이거나 ""이면
+			//위에서 만든 eDate(현재시각)을 그대로 다시 eDate에 담고
+			//그렇지 않으면 eDate에 null을 담아라
+			
+			//3항연산자
+			//조건에 따라 변수에 다른 값을 저장하고 싶을때
+			//변수 = 조건 ? 참일때 : 거짓일때
+			TodoVO tVO = todoList.get(index);
+			eDate = tVO.getEDate() == null || tVO.getEDate().isEmpty() ? eDate : null;
+			eDate = tVO.getETime() == null || tVO.getETime().isEmpty() ? eDate : null;
+			tVO.setEDate(eDate);
+			tVO.setETime(eTime);
+		} catch (Exception e) {
+			System.out.println("TODOList 데이터 범위를 벗어났습니다.");
+			
+		}
 		
-		TodoVO tVO = TodoVO.builder().tKey(toVO.get(num).getTKey()).sDate(today).sTime(time).tContent(toVO.get(num).getTContent()).eDate(today).eTime(time).build();
-		
-		todoList.set(num, tVO);
-		
+
+
+		/*
+		 * Date curDate = new Date(System.currentTimeMillis());
+		 * 
+		 * SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		 * SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss"); String today
+		 * = dateFormat.format(curDate); String time = timeFormat.format(curDate);
+		 * 
+		 * TodoVO tVO =
+		 * TodoVO.builder().tKey(toVO.get(num).getTKey()).sDate(today).sTime(time).
+		 * tContent(toVO.get(num).getTContent()).eDate(today).eTime(time).build();
+		 * 
+		 * todoList.set(num, tVO);
+		 */
 
 	}
 
