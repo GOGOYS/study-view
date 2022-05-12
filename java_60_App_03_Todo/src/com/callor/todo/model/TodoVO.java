@@ -23,6 +23,17 @@ public class TodoVO {
 	
 	private boolean bComp;			//완료여부
 	
+	public TodoVO(String tKey, String sDate, String sTime, String tContent, String bComp) {
+		super();
+		this.tKey =tKey;
+		this.sDate = sDate;
+		this.sTime = sTime;
+		this.tContent = tContent;
+		boolean b = Boolean.valueOf(bComp);
+		this.bComp = b;
+	}
+	
+	
 	@Override
 	public String toString() {
 		
