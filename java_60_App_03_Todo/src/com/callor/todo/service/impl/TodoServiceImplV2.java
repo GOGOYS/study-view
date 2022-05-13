@@ -2,6 +2,7 @@ package com.callor.todo.service.impl;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 import com.callor.todo.model.IndexInfo;
@@ -42,8 +43,8 @@ public class TodoServiceImplV2 extends TodoServiceImplV1{
 		int T_SDATE = 1;
 		int T_STIME =2;
 		int T_EDATE =3;
-		int T_ETIME =3;
-		int T_CONTENT =4;
+		int T_ETIME =4;
+		int T_CONTENT =5;
 		
 		while(scan.hasNext()) {
 			String tLine = scan.nextLine();
@@ -79,5 +80,27 @@ public class TodoServiceImplV2 extends TodoServiceImplV1{
 
 		}
 	}
-
+	//end loadTodo
+	@Override
+	public void update(Integer num, String content) {
+		int index = num -1;
+		TodoVO tVO;
+		
+		try {
+			tVO = todoList.get(index);
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("선택한 항목이 리스트에 없습니다");
+			 return;
+		}
+		tVO.setTContent(content);
+		
+		//업데이트 후에 내용을 파일에 자동으로 저장하기
+		try {
+			this.saveTodo(null);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

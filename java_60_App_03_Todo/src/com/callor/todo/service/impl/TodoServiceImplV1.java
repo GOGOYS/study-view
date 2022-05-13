@@ -82,9 +82,9 @@ public class TodoServiceImplV1 implements TodoService {
 	}
 
 	@Override
-	public void update(TodoVO tVO) {
+	public void update(Integer num, String content) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
@@ -136,7 +136,7 @@ public class TodoServiceImplV1 implements TodoService {
 		DateTimeFormatter toDateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		DateTimeFormatter toTimeFormat = DateTimeFormatter.ofPattern("hh::mm:ss");
 
-		String eDate = local.format(toTimeFormat);
+		String eDate = local.format(toDateFormat);
 		String eTime = local.format(toTimeFormat);
 		try {
 			
@@ -149,7 +149,7 @@ public class TodoServiceImplV1 implements TodoService {
 			//변수 = 조건 ? 참일때 : 거짓일때
 			TodoVO tVO = todoList.get(index);
 			eDate = tVO.getEDate() == null || tVO.getEDate().isEmpty() ? eDate : null;
-			eDate = tVO.getETime() == null || tVO.getETime().isEmpty() ? eDate : null;
+			eTime = tVO.getETime() == null || tVO.getETime().isEmpty() ? eTime : null;
 			tVO.setEDate(eDate);
 			tVO.setETime(eTime);
 		} catch (Exception e) {
