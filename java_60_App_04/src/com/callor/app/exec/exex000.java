@@ -6,22 +6,21 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
 
-public class Exec08 {
+public class exex000 {
 	public static void main(String[] args) {
 		
-		String fileName = "src/com/callor/app/exec/delta.txt";
+		String file = "src/com/callor/app/exec/delta.txt";
 		
 		InputStream data = null;
 		Scanner scan = null;
 		
 		try {
-			data = new FileInputStream(fileName);
+			data = new FileInputStream(file);
 			scan = new Scanner(data);
 			while(scan.hasNext()) {
 				String line = scan.nextLine();
 				System.out.println(line);
 			}
-			
 			scan.close();
 			try {
 				data.close();
@@ -30,9 +29,11 @@ public class Exec08 {
 				e.printStackTrace();
 			}
 		} catch (FileNotFoundException e) {
-			System.out.println("파일이 없어");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("파일이 없습니다");
 		}
 		
-				
+		
 	}
 }

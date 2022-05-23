@@ -1,13 +1,12 @@
 package com.callor.app.exec;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import com.callor.app.model.AddressVO;
 import com.callor.app.service.AddrServiceV1;
 
-public class Exec5 {
+public class AddrExec04 {
 	public static void main(String[] args) {
 		/*
 		 * 다수의 데이터를 저장하고 연산에 사용하기 위한 데이터 type
@@ -30,17 +29,7 @@ public class Exec5 {
 		addrList.add(addrVO3);
 		
 		AddrServiceV1 addrService = new AddrServiceV1();
-		AddressVO adVO = new AddressVO();
-		
-		adVO.setName("이소룡");
-		adVO.setAge(40);
-		addrList.set(2, adVO);
-		
 		addrService.printAddrList(addrList);
-		
-		
-		
-		List<AddressVO>.sort(addrList);
 		
 		
 	}
